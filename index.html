@@ -1,80 +1,120 @@
-<!-- Save this as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarthak Pal | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="animation.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Sarthak Pal</h1>
+  <!-- ===== Header / Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">Sarthak <span>Pal</span></div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <img src="assets/profile.jpg" alt="Sarthak Pal" class="profile">
+    <button id="theme-toggle">🌙</button>
   </header>
 
-  <section id="about">
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <h1 class="fade-in">Hi, I'm <span>Sarthak Pal</span></h1>
+    <p class="fade-in delay-1">Software Engineer | Backend Developer | Problem Solver</p>
+    <a href="#projects" class="btn fade-in delay-2">View My Work</a>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I am a passionate software enthusiast with experience in C++, Python, and Java. I build real-world web applications using Flask and Spring Boot, enjoy backend systems, solving algorithmic problems, and writing clean code. I’ve completed job simulations (Walmart, Tata, EA) and participate in challenges like GFG 160 Days Challenge.</p>
+    <p>
+      I’m a passionate software developer skilled in C++, Java, Python, and backend systems. 
+      I’ve built impactful projects like a Quotation Maker Web App, a URL Shortener in Spring Boot, 
+      and CPU Scheduling algorithms in C++. I focus on writing clean, efficient code and delivering 
+      solutions that make a difference.
+    </p>
   </section>
 
-  <section id="skills">
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="section">
     <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> C++, Python, Java, HTML, CSS, JavaScript, Dart</li>
-      <li><strong>Frameworks:</strong> Flask, Spring Boot</li>
-      <li><strong>Tools:</strong> Git, GitHub, VS Code, IntelliJ</li>
-      <li><strong>Concepts:</strong> OOP, CPU Scheduling, File Systems, SDLC Models</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Spring Boot</div>
+      <div class="skill-card">Flask</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">Git & GitHub</div>
+    </div>
   </section>
 
-  <section id="projects">
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Quotation Maker Web App</h3>
-      <p>PDF Quotation Generator for Rathi Sons using Flask, HTML/CSS, and Python’s ReportLab.</p>
-    </div>
-    <div class="project">
-      <h3>URL Shortener</h3>
-      <p>Spring Boot-based shortener with redirect, CRUD, and short-code generation.</p>
-    </div>
-    <div class="project">
-      <h3>CPU Scheduling in C++</h3>
-      <p>Implementations of FCFS, SJF, Round Robin, and Priority scheduling.</p>
-    </div>
-    <div class="project">
-      <h3>Bank OOP System</h3>
-      <p>Encapsulation and message passing example with Bank-Customer model in C++.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Quotation Maker Web App</h3>
+        <p>Flask-based app generating professional PDFs for Rathi Sons Alglaze Pvt. Ltd.</p>
+        <a href="https://github.com/sarthak816" target="_blank">GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>URL Shortener</h3>
+        <p>Spring Boot powered URL shortener with redirect, CRUD, and short-code generation.</p>
+        <a href="https://github.com/sarthak816" target="_blank">GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>CPU Scheduling in C++</h3>
+        <p>Implemented FCFS, SJF, Priority Scheduling, and Round Robin algorithms.</p>
+        <a href="https://github.com/sarthak816" target="_blank">GitHub →</a>
+      </div>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Virtual Internship Experience</h2>
-    <ul>
-      <li>Walmart Advanced Software Engineering – Forage</li>
-      <li>GE Aerospace Digital Technology – Forage</li>
-      <li>Tata Data Visualization – Forage</li>
-      <li>Tata Cybersecurity Analyst – Forage</li>
-      <li>Electronic Arts Software Engineering – Forage</li>
-    </ul>
+  <!-- ===== Experience Section ===== -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Walmart Global Tech</h3>
+        <p>Advanced Software Engineering Simulation</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Tata</h3>
+        <p>Data Visualization & Cybersecurity Analyst Simulations</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Electronic Arts</h3>
+        <p>Software Engineering Simulation</p>
+      </div>
+      <div class="timeline-item">
+        <h3>GE Aerospace</h3>
+        <p>Digital Technology Simulation</p>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: sarthak816@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/sarthak816" target="_blank">github.com/sarthak816</a></p>
-    <p>LinkedIn: <em>(Add your LinkedIn URL here)</em></p>
+    <p>Let’s connect! Reach out via:</p>
+    <div class="contact-links">
+      <a href="mailto:sarthak816@gmail.com">📧 Email</a>
+      <a href="https://github.com/sarthak816" target="_blank">💻 GitHub</a>
+      <a href="https://linkedin.com/in/your-linkedin" target="_blank">🔗 LinkedIn</a>
+    </div>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer>
-    <p>© 2025 Sarthak Pal. All rights reserved.</p>
+    <p>© 2025 Sarthak Pal | Built with ❤️</p>
   </footer>
 </body>
 </html>
