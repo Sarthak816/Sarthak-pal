@@ -5,116 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarthak Pal | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="animation.js"></script>
 </head>
 <body>
-  <!-- ===== Header / Navbar ===== -->
-  <header class="navbar">
-    <div class="logo">Sarthak <span>Pal</span></div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="theme-toggle">🌙</button>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in">Hi, I’m <span>Sarthak Pal</span></h1>
+      <h2 class="typing">Software Developer | C++ | Java | Spring Boot</h2>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
   </header>
 
-  <!-- ===== Hero Section ===== -->
-  <section class="hero">
-    <h1 class="fade-in">Hi, I'm <span>Sarthak Pal</span></h1>
-    <p class="fade-in delay-1">Software Engineer | Backend Developer | Problem Solver</p>
-    <a href="#projects" class="btn fade-in delay-2">View My Work</a>
-  </section>
-
-  <!-- ===== About Section ===== -->
-  <section id="about" class="section">
+  <!-- About Section -->
+  <section id="about" class="section fade-up">
     <h2>About Me</h2>
     <p>
-      I’m a passionate software developer skilled in C++, Java, Python, and backend systems. 
-      I’ve built impactful projects like a Quotation Maker Web App, a URL Shortener in Spring Boot, 
-      and CPU Scheduling algorithms in C++. I focus on writing clean, efficient code and delivering 
-      solutions that make a difference.
+      I am a passionate developer focused on building efficient, scalable, and impactful solutions.
+      I specialize in <b>C++, Java, and Spring Boot</b> and love creating projects that stand out.
     </p>
   </section>
 
-  <!-- ===== Skills Section ===== -->
-  <section id="skills" class="section">
+  <!-- Skills Section -->
+  <section id="skills" class="section fade-up">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill-card">C++</div>
       <div class="skill-card">Java</div>
-      <div class="skill-card">Python</div>
       <div class="skill-card">Spring Boot</div>
+      <div class="skill-card">Python</div>
       <div class="skill-card">Flask</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">HTML & CSS</div>
-      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">SQL</div>
     </div>
   </section>
 
-  <!-- ===== Projects Section ===== -->
-  <section id="projects" class="section">
+  <!-- Projects Section -->
+  <section id="projects" class="section fade-up">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Quotation Maker Web App</h3>
-        <p>Flask-based app generating professional PDFs for Rathi Sons Alglaze Pvt. Ltd.</p>
-        <a href="https://github.com/sarthak816" target="_blank">GitHub →</a>
-      </div>
-      <div class="project-card">
+        <img src="assets/project1.png" alt="Project 1">
         <h3>URL Shortener</h3>
-        <p>Spring Boot powered URL shortener with redirect, CRUD, and short-code generation.</p>
-        <a href="https://github.com/sarthak816" target="_blank">GitHub →</a>
+        <p>A Spring Boot-based URL shortener with analytics dashboard.</p>
       </div>
       <div class="project-card">
-        <h3>CPU Scheduling in C++</h3>
-        <p>Implemented FCFS, SJF, Priority Scheduling, and Round Robin algorithms.</p>
-        <a href="https://github.com/sarthak816" target="_blank">GitHub →</a>
+        <img src="assets/project2.png" alt="Project 2">
+        <h3>Quotation Maker</h3>
+        <p>A Flask app for professional PDF quotation generation.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Experience Section ===== -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Walmart Global Tech</h3>
-        <p>Advanced Software Engineering Simulation</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Tata</h3>
-        <p>Data Visualization & Cybersecurity Analyst Simulations</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Electronic Arts</h3>
-        <p>Software Engineering Simulation</p>
-      </div>
-      <div class="timeline-item">
-        <h3>GE Aerospace</h3>
-        <p>Digital Technology Simulation</p>
-      </div>
-    </div>
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-up">
+    <h2>Contact Me</h2>
+    <p>Let’s connect and build something great together!</p>
+    <a href="mailto:sarthak@example.com" class="btn">Email Me</a>
   </section>
 
-  <!-- ===== Contact Section ===== -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Let’s connect! Reach out via:</p>
-    <div class="contact-links">
-      <a href="mailto:sarthak816@gmail.com">📧 Email</a>
-      <a href="https://github.com/sarthak816" target="_blank">💻 GitHub</a>
-      <a href="https://linkedin.com/in/your-linkedin" target="_blank">🔗 LinkedIn</a>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
   <footer>
-    <p>© 2025 Sarthak Pal | Built with ❤️</p>
+    <p>© 2025 Sarthak Pal. All rights reserved.</p>
   </footer>
+
+  <!-- JS -->
+  <script src="style.js"></script>
 </body>
 </html>
