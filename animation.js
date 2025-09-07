@@ -1,12 +1,15 @@
-// ===== Scroll Animations =====
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2 };
+// Fade-in on scroll
+const faders = document.querySelectorAll(".fade-in");
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const appearOptions = {
+  threshold: 0.3,
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
+    entry.target.classList.add("visible");
+    appearOnScroll.unobserve(entry.target);
   });
 }, appearOptions);
 
@@ -14,9 +17,19 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// ===== Theme Toggle =====
-const toggleBtn = document.getElementById('theme-toggle');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  toggleBtn.textContent = document.body.classList.contains('light-mode') ? "☀️" : "🌙";
-});
+// Typing effect for hero subtitle
+const typingText = document.querySelector(".typing");
+if (typingText) {
+  const text = typingText.textContent;
+  typingText.textContent = "";
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      typingText.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    }
+  }
+  typeWriter();
+}
