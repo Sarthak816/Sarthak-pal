@@ -1,35 +1,26 @@
-// Fade-in on scroll
-const faders = document.querySelectorAll(".fade-in");
-
-const appearOptions = {
-  threshold: 0.3,
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("visible");
-    appearOnScroll.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+// Smooth navbar background on scroll
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// Typing effect for hero subtitle
-const typingText = document.querySelector(".typing");
-if (typingText) {
-  const text = typingText.textContent;
-  typingText.textContent = "";
-  let i = 0;
+// Highlight active nav link
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-  function typeWriter() {
-    if (i < text.length) {
-      typingText.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 70;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
     }
-  }
-  typeWriter();
-}
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
